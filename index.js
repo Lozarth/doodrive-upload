@@ -15,8 +15,6 @@ app.post('/upload', async function (req, res) {
     const apiKey = req.headers['api_key']
     const apiToken = req.headers['api_token']
 
-    console.log(apiKey, apiToken)
-
     if (!apiKey || !apiToken) return res.status(400).send('No API_KEY or API_TOKEN provided')
 
     const file = Object.values(req.files)[0]
